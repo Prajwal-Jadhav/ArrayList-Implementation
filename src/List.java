@@ -57,4 +57,12 @@ public class List<Type> {
     }
     this.firstFreeIndex--;
   }
+
+  public Type value(int index) {
+    if (index < 0 || index >= this.firstFreeIndex) {
+      throw new ArrayIndexOutOfBoundsException("Index " + index + " outside of [0, " + this.firstFreeIndex + "]");
+    }
+
+    return this.values[index];
+  }
 }
