@@ -30,13 +30,8 @@ public class List<Type> {
     this.values = newArray;
   }
 
-  public boolean contains(Object object) {
-    for (int i = 0; i < this.firstFreeIndex; i++) {
-      if (this.values[i].equals(object)) {
-        return true;
-      }
-    }
-    return false;
+  public boolean contains(Type value) {
+    return this.findIndexOfValue(value) > 0;
   }
 
   public void remove(Type value) {
