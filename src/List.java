@@ -42,7 +42,7 @@ public class List<Type> {
     this.moveListToLeft(indexOfValue);
   }
 
-  private int findIndexOfValue(Type value) {
+  public int findIndexOfValue(Type value) {
     for (int i = 0; i < this.firstFreeIndex; i++) {
       if (this.values[i].equals(value)) {
         return i;
